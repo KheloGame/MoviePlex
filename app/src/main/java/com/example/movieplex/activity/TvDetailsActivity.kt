@@ -155,7 +155,7 @@ class TvDetailsActivity : AppCompatActivity() {
                 it.genres.forEach {
                     addChip(it.name)
                 }
-                binding.tvAvgRating.text = "Rating: ${it.voteAverage.toInt()}"
+                binding.tvAvgRating.text = "Rating: ${it.voteAverage.toInt()}/10"
             }
 
         })
