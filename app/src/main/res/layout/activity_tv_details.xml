@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_tv_details_scene"
+    tools:context=".activity.TvDetailsActivity">
+
+    <ImageView
+        android:id="@+id/img_backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/item_alt"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:fabSize="mini"
+        android:backgroundTint="@color/util_alt"
+        android:src="@drawable/ic_back"
+        app:tint="@color/icon_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/cl_details_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_backdrop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="18dp"
+                android:backgroundTint="@color/util_alt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_poster"
+                        android:layout_width="160dp"
+                        android:layout_height="230dp"
+                        android:background="@color/item_main"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="Doctor Strange in the Multiverse of Madness"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/img_poster"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_tagline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="The one is not the only."
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        app:layout_constraintEnd_toEndOf="@id/tv_title"
+                        app:layout_constraintStart_toStartOf="@id/tv_title"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+                    <TextView
+                        android:id="@+id/tv_release_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center"
+                        android:text="Year: 2001"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@id/tv_avg_rating"
+                        app:layout_constraintStart_toStartOf="@id/tv_tagline"
+                        app:layout_constraintTop_toBottomOf="@id/tv_tagline" />
+
+                    <TextView
+                        android:id="@+id/tv_avg_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center"
+                        android:text="Rating: 7.3"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_tagline"
+                        app:layout_constraintStart_toEndOf="@id/tv_release_date"
+                        app:layout_constraintTop_toBottomOf="@id/tv_tagline" />
+
+                    <TextView
+                        android:id="@+id/tv_season"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Season: 1"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_release_date"
+                        app:layout_constraintStart_toStartOf="@id/tv_release_date"
+                        app:layout_constraintTop_toBottomOf="@id/tv_release_date" />
+
+                    <TextView
+                        android:id="@+id/tv_episode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Episodes: 7"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_avg_rating"
+                        app:layout_constraintStart_toStartOf="@+id/tv_avg_rating"
+                        app:layout_constraintTop_toBottomOf="@id/tv_avg_rating" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:text="Genre"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cv_header"
+                app:layout_constraintTop_toBottomOf="@id/cv_header" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_genre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_genre"
+                app:layout_constraintEnd_toEndOf="@id/tv_genre"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre"/>
+
+            <TextView
+                android:id="@+id/tv_images"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Images"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintStart_toStartOf="@id/cg_genre"
+                app:layout_constraintTop_toBottomOf="@id/cg_genre"
+                app:layout_constraintEnd_toEndOf="@id/cg_genre"/>
+
+            <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                android:id="@+id/rv_images"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                tools:listitem="@layout/item_images_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_images"/>
+
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:text="Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary."
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_images" />
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Review"
+                android:padding="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_overview"
+                app:layout_constraintStart_toStartOf="@id/tv_overview"
+                app:layout_constraintEnd_toEndOf="@id/tv_overview"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_review"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_review"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_similar_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Similar TV Shows"
+                android:padding="8dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/rv_review"
+                app:layout_constraintStart_toStartOf="@id/rv_review"
+                app:layout_constraintEnd_toEndOf="@id/rv_review"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_similar_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_similar_tv"
+                app:layout_constraintTop_toBottomOf="@id/tv_similar_tv"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

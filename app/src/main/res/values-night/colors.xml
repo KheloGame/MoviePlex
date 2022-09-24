@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="item_main">#16262E</color>
+    <color name="item_alt">#2E4756</color>
+
+    <color name="rate_us_alt">#272932</color>
+
+    <color name="util_main">#222222</color>
+    <color name="util_alt">#222222</color>
+
+    <color name="icon_main">#FFFFFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#CDCDCD</color>
+
+</resources>

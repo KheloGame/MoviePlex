@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    android:backgroundTint="@color/util_alt"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Folio Swami"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gaiman is good. I can't speak of the adaptation, as I could not be bothered to check out the comics. But, by current standards, the story is very good. It has holes, but overall the story goes smooth. I can see the roots of *American Gods* in *The Sandman*.\r\n\r\nThe casting is good. The acting is smooth. The designs are beautiful, and I guess the merit goes to the artist that drew the comics.\r\n\r\nMost writers today just go one more. Like the mobster in *Casino*, if you attack the character with a knife, the character will bring a gun. Nothing special. Gaiman goes some place else. So bad he has given up writing. Take for example the fight in Episode 4. I have never seen something like that. I'm not saying it wasn't done, but it's different by current writing standards."
+            android:textSize="18sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
